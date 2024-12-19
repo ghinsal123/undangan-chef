@@ -1,0 +1,1699 @@
+@font-face {
+    font-family: 'Lora';
+    src: url('../font/Lora-VariableFont_wght.ttf') format('truetype');
+  }
+
+@font-face {
+    font-family: 'DM Serif Text';
+    src: url('../font/DMSerifText-Regular.ttf') format('truetype');
+  }
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0px;
+}
+
+p {
+    font-family: 'Lora';
+    font-weight: 300;
+    font-size: 20px;
+}
+
+h1 , h2, h3, h4, h5,
+h6, h7, h8, h9, h10 {
+    font-family: 'DM Serif Text';
+    font-weight: 500;
+}
+
+h1{
+    font-size: 70px;
+    color: orange;
+    margin-top: 0px;
+    text-align: center;
+}
+
+#section-1{
+    position: relative;
+    background-color: aqua;
+    background-image: url('../img/cover1.jpg');
+    background-repeat: no-repeat;
+    /*background-size: contain;*/
+    background-size: cover;
+    /*background-position: center bottom;*/
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100vh;
+    /*overflow: scroll;*/
+    overflow: hidden;
+}
+
+#section-2{
+    background-color: #8a817c;
+    height: 100vh;
+    display: none;
+}
+
+#section-3{
+    background-color: #f5ebe0;
+    height: 110vh;
+    display: none;
+}
+
+#section-4{
+    background-color: #e3d5ca;
+    height: 100vh;
+    display: none;
+}
+
+#section-5{
+    background-color: #d5bdaf;
+    height: 180vh;
+    display: none;
+}
+
+#section-6{
+    background-color: #f4f1de;
+    height: 100vh;
+    display: none;
+}
+
+#section-7{
+    background-color: #e7d7c1;
+    height: 100vh;
+    display: none;
+}
+
+#section-8{
+    background-color: #a98467;
+    height: 110vh;
+    display: none;
+}
+
+#section-9{
+    background-color: #eae0d5;
+    height: 100vh;
+    display: none;
+}
+
+#section-10{
+    background-color: #bbbbbb;
+    height: 100vh;
+    display: none;
+}
+
+#section-11{
+    background-color: #a98467;
+    height: 80vh;
+    display: none;
+}
+
+/* ORNAMENT */
+.pos-tl{
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+}
+
+.pos-tr{
+    position: absolute;
+    top: -1000px;
+    right: -1000px;
+}
+
+.pos-bl{
+    position: absolute;
+    bottom: -1000px;
+    left: -1000px;
+}
+
+.pos-br{
+    position: absolute;
+    bottom: -1000px;
+    right: -1000px;
+}
+
+/* COVER */
+.konten{
+    position: absolute;
+    z-index: 1;
+    /*background: white;*/
+    /* % untuk lebar dan tinggi dari parent, parent ini dari section 1 */
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 20vh;
+}
+
+.mar-tb{
+    margin: 0px;
+}
+
+#mar-tb{
+    margin: 10px;
+}
+
+.mar-t{
+    margin-top: 0px;
+}
+
+#mar-t{
+    margin-top: 5px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.mar-b{
+    margin-bottom: 0px;
+    margin-top: 50px;
+}
+
+/* TOMBOL BUKA & MUSIK */
+#tombol-buka{
+    border: none;
+    background-color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    color: orange;
+    border-radius: 50px;
+}
+
+#tombol-buka:hover {
+    background-color: orange;
+    color: white;
+}
+
+#kotak-musik{
+    display: none;
+}
+
+#tombol-musik{
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: orange;
+    border-radius: 100%;
+    padding: 15px;
+}
+
+#tombol-musik img{
+    width: 30px;
+    height: 30px;
+    transform:
+}
+
+/* NAVBAR */
+#nav{
+    width: 100%;
+    height: 80px;
+    background: orange;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 10;
+}
+
+.logo{
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    z-index: 10;
+}
+
+.hamburger{
+    display: none;
+    z-index: 10;
+}
+
+.nav-bar ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-bar ul li a{
+    text-decoration: none;
+    display: block;
+    color: white;
+    font-size: 20px;
+    padding: 5px 15px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 2px;
+}
+
+.nav-bar ul li a:hover{
+    color: orange;
+    background: white;
+}
+
+/* QUOTES */
+.quotes{
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    animation-name: blur;
+    animation-duration: 1s;
+}
+
+.isi_quotes{
+    color: white;
+    text-align: center;
+    padding: 0 100px 0 100px;
+}
+
+.audio{
+    width: 300px;
+    height: 50px;
+    margin: 30px;
+    position: relative;
+    left: 38%;
+}
+
+/* PROFILE */
+.profile{
+    background-image: url('../img//bg3.jpeg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+
+}
+
+.profile h1{
+    margin-bottom: 20px;
+}
+
+.profile h2{
+    font-family: 'Lora';
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0px;
+}
+
+.profile h3{
+    color: black;
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
+.profile p{
+    font-size: 18px;
+    color: black;
+    margin: 0px;
+}
+
+.bentuk{
+    width: 130px;
+    height: 130px;
+    background-color: white;
+    display: flex;
+    border-radius: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    position: inline-block;
+    left: 50%;
+}
+
+.bingkai{
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    display: flex;
+    border-radius: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    margin-right: 95px;
+}
+
+#kotak1{
+    display: inline-block;
+    position: relative;
+    margin-right: 95px;
+    margin-top: 50px;
+}
+
+#kotak2{
+    display: inline-block;
+    position: relative;
+    margin-left: 75px;
+    margin-top: 50px;
+}
+
+.kotak{
+    display: inline-block;
+    position: relative;
+    margin: 30px;
+}
+
+.tombol{
+    border: none;
+    background-color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    color: orange;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.tombol:hover{
+    background-color: orange;
+    color: white;
+}
+
+/* AKAD DAN RESEPSI*/
+.acara{
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    animation: samping linear;
+    animation-timeline: entry 0% cover 40%;
+}
+
+.acara h1{
+    margin: 15px;
+    font-size: 50px;
+}
+
+#akad{
+    padding-top: 0px;
+    padding-bottom: 20px;
+    display: inline-block;
+    height: 65%;
+    width: 40%;
+    margin: 20px 20px 0 0;
+    background-color: #efebce;
+    border-radius: 8%;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.300);
+    animation: kiri linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+#resepsi{
+    padding-top: 0px;
+    padding-bottom: 20px;
+    display: inline-block;
+    height: 65%;
+    width: 40%;
+    margin: 20px 20px 0 0;
+    background-color: #efebce;
+    border-radius: 8%;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.300);
+    animation: kanan linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+hr{
+    width: 70px;
+    border: 1px solid red;
+}
+
+#akad h2{
+    font-family: 'Lora';
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0px;
+}
+
+#resepsi h2{
+    font-family: 'Lora';
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0px;
+}
+
+/* GALLERY */
+.gallery{
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    text-align: center;
+}
+
+.photo img{
+    display: block;
+    width: 100%;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+video{
+    display: block;
+    width: 100%;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.photo{
+    background-color: white;
+    width: 60%;
+    height: 50%;
+    margin: auto;
+    padding: 0px;
+    border: 10px solid white;
+    list-style: none;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    grid-template-areas: 
+    '1 2 3'
+    '4 5 6'
+    'video video video';
+}
+
+.item7{
+    grid-area: video;
+}
+
+/* TAMU */
+.tamu{
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    animation: kanan linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.table{
+  border-collapse: collapse;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.table th, td {
+    text-align: center;
+    padding: 8px;
+    width: 500px;
+}
+  
+.table tr{
+    background-color: #eae2b7;
+    box-shadow: 5px 6px 8px rgba(90, 75, 75, 0.384);
+}
+  
+.table th {
+    background-color: #dda15e;
+    color: white;
+    text-align: center;
+}
+
+/* RSVP */
+.rsvp{
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.kotak3{
+    padding: 30px 3px 30px 80px;
+    display: inline-block;
+    height: 65%;
+    width: 30%;
+    margin-left: 130px;
+    background-color: #efebce;
+    border-radius: 8%;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.300);
+}
+
+.t_area{
+    resize:none;
+    width:300px;
+    height:100px;
+}
+
+#p_submit{
+    margin-left:300px;    
+}
+
+.tombol2{
+    border: none;
+    background-color: green;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 10px;
+}    
+
+.tombol2:hover{
+    background-color: white;
+    color: green;
+}
+
+.gambar1{
+    display: inline-block;
+    position: relative;
+    top: 10px;
+    margin-left: 150px;
+    width: 200px;
+    height: 200px;
+    animation: kiri linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.gambar2{
+    display: inline-block;
+    position: relative;
+    top: 10px;
+    margin-left: 150px;
+    width: 200px;
+    height: 200px;
+    animation: kanan linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+/* Story */
+.story{
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    text-align: center;
+}
+
+.story h1{
+    margin: 0px;
+}
+
+.story p{
+    margin: 20px 0px 0px 0px;
+}
+
+.story hr{
+    width: 150px;
+    border: 1px solid green;
+}
+
+.kotak41{
+    padding: 0px 30px 30px 30px;
+    display: inline-block;
+    height: 65%;
+    width: 40%;
+    margin: 20px 20px 0 0;
+    background-color: #efebce;
+    border-radius: 8%;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.300);
+    animation: kiri linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+}
+.kotak42{
+    padding: 0px 30px 30px 30px;
+    display: inline-block;
+    height: 65%;
+    width: 40%;
+    margin: 20px 20px 0 0;
+    background-color: #efebce;
+    border-radius: 8%;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.300);
+    animation: kanan linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+}
+.kotak43{
+    padding: 0px 30px 30px 30px;
+    display: inline-block;
+    height: 65%;
+    width: 40%;
+    margin: 20px 20px 0 0;
+    background-color: #efebce;
+    border-radius: 8%;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.300);
+    animation: kiri linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+}
+.kotak44{
+    padding: 0px 30px 30px 30px;
+    display: inline-block;
+    height: 65%;
+    width: 40%;
+    margin: 20px 20px 0 0;
+    background-color: #efebce;
+    border-radius: 8%;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.300);
+    animation: kanan linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+}
+
+/* Gift */
+.gift{
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.gift h1{
+    margin: 0px;
+}
+
+.p_text{
+    text-align: center;
+}
+
+.kotak5{
+    padding: 5px 30px 30px;
+    display: inline-block;
+    height: 65%;
+    width: 30%;
+    margin-left: 140px;
+    background-color: #efebce;
+    border-radius: 8%;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.300);
+}
+
+.kotak5 input{
+    width: 100%;
+    height: 30px;
+}
+
+.kotak5 select{
+    width: 100%;
+    height: 30px;
+}
+
+#p_kirim{
+    margin-left:300px; 
+    width: 20%;
+    height: 20%;   
+}
+
+/* Message */
+.message{
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    animation: kiri linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.kotak6{
+    padding: 30px;
+    display: inline-block;
+    height: 65%;
+    width: 40%;
+    margin-left: 50px;
+    background-color: #efebce;
+    border-radius: 8%;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.300);
+}
+
+.kotak6 input{
+    width: 50%;
+    height: 30px;
+}
+
+#u_kirim{
+    width: 20%;
+    height: 20%;   
+}
+
+/* Thankyou */
+.thanks{
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+}
+
+/*Animasi*/
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes blur{
+    from{
+        opacity: 0;
+        filter: translateX(-100%);
+        transition: all 1s;
+    }
+    to{
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes kiri{
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes kanan{
+    from{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+
+/*Bentuk Tablet  */
+@media only screen and (min-width: 760px) and (max-width: 1200px){
+    h1{
+        font-size: 90px;
+    }
+    #mar-tb{
+        margin: 10px;
+        font-size: 70px;
+    }    
+    #section-1 button{
+        font-size: 24px;
+    }
+    .konten p{
+        font-size: 30px;
+    }
+    #nav{
+        height: 70px;
+    }
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger .line{
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 6px 0;
+    }
+    .nav-bar{
+        height: 0px;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100vw;
+        background: orange;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+    .nav-bar.active{
+        height: 450px;
+    }
+    .nav-bar ul{
+        display: block;
+        width: fit-content;
+        margin: 30px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .nav-bar.active ul{
+        opacity: 1; 
+    }
+    .nav-bar ul li a{
+        margin-bottom: 12px;
+        color: white;
+    }
+
+    .quotes{
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+        text-align: center;
+    }    
+    .isi_quotes{
+        color: white;
+        text-align: left;
+        padding: 0 30px 0 30px;
+    }    
+    .isi_quotes p{
+        font-size: 24px;
+    }
+    .audio{
+        width: 20%;
+        margin: 30px;
+        position: relative;
+        left: 0%;
+    }
+
+    #section-3{
+        background-color: #f5ebe0;
+        height: 100vh;
+        display: none;
+    }    
+    .profile{
+        background-image: url('../img//bg3.jpeg');
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+        text-align: center;
+    }    
+    .profile p{
+        font-size: 24px;
+    }
+    .profile h1{
+        margin-bottom: 15px;
+    }
+    .profile h2{
+        font-family: 'Lora';
+        font-size: 24px;
+        margin: 0px;
+    }
+    .profile h3{
+        color: black;
+        font-size: 28px;
+        margin-bottom: 1rem;
+    }
+    .bentuk{
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        display: flex;
+        border-radius: 100%;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        position: inline-block;
+        left: 50%;
+    }
+    .bingkai{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        border-radius: 100%;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        margin-right: 95px;
+    }    
+    #kotak1{
+        display: inline-block;
+        position: relative;
+        margin: 80px 70px 40px 0;
+    }
+    #kotak2{
+        display: inline-block;
+        position: relative;
+        margin: 80px 0 40px 70px;
+    }
+    .kotak{
+        display: inline-block;
+        position: relative;
+        margin: 0 30px 0;
+    }
+    .kotak h3{
+        margin: 0;
+    }
+    .kotak a{
+        font-size: 24px;
+    }
+
+    #section-4{
+        background-color: #e3d5ca;
+        height: 140vh;
+        display: none;
+    }    
+    .acara{
+        padding-top: 5rem;
+        padding-bottom: 4rem;
+        text-align: center;
+    }
+    #akad{
+        padding: 30px;
+        display: block;
+        height: 600px;
+        width: 500px;
+        margin: 0 0 40px 120px;
+        background-color: ##efebce;
+        border-radius: 8%;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.300);
+    }
+    #akad h1{
+        font-size: 45px;
+    }
+    #akad p{
+        font-size: 24px;
+    }
+    #akad h2{
+        font-family: 'Lora';
+        font-size: 4rem;
+        font-weight: bold;
+        margin: 0px;
+    }
+    #akad a{
+        font-size: 20px;
+    }
+    #resepsi{
+        padding: 30px;
+        display: block;
+        height: 600px;
+        width: 500px;
+        margin-left: 120px;
+        background-color: #efebce;
+        border-radius: 8%;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.300);
+    }
+    #resepsi h1{
+        font-size: 45px;
+    }
+    #resepsi p{
+        font-size: 24px;
+    }
+    hr{
+        width: 80px;
+        border: 1px solid red;
+    }
+    #resepsi h2{
+        font-family: 'Lora';
+        font-size: 4rem;
+        font-weight: bold;
+        margin: 0px;
+    }
+    #resepsi a{
+        font-size: 20px;
+    }
+
+    #section-5{
+        background-color: #d5bdaf;
+        height: 100vh;
+        display: none;
+    }
+    .gallery{
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+        text-align: center;
+    }
+    .photo img{
+        display: block;
+        width: 100%;
+    }
+    video{
+        display: block;
+        width: 100%;
+    }
+    .photo{
+        background-color: white;
+        width: 85%;
+        height: 75%;
+        margin: auto;
+        padding: 0px;
+        border: 10px solid white;
+        list-style: none;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 5px;
+        grid-template-areas: 
+        '1 2 3'
+        '4 5 6'
+        'video video video';
+    }
+    .item7{
+        grid-area: video;
+    }
+    
+    .tamu{
+        padding: 4rem;
+        text-align: center;
+    }
+    .table{
+        margin-top: 2.8rem;
+    }
+    .table th, td {
+        text-align: center;
+        padding: 5px;
+        width: 500px;
+        font-size: 24px;
+    }        
+    
+    .gambar1{
+        display: inline-block;
+        position: absolute;
+        top: 80px;
+        left: 0px;
+        right: 20px;
+        width: 100px;
+        height: 100px;
+        animation: kiri linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+    }
+    .gambar2{
+        display: inline-block;
+        position: absolute;
+        top: 80px;
+        right: 150px;
+        width: 100px;
+        height: 100px;
+        animation: kanan linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+    }    
+    .rsvp{
+        padding: 4rem;
+        text-align: left;
+    }
+    .kotak3{
+        padding: 40px 3px 30px 50px;
+        display: inline-block;
+        height: 70%;
+        width: 80%;
+        margin-left: 50px;
+        background-color: #efebce;
+        border-radius: 8%;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.300);
+    }
+    .kotak3 label, select, input{
+        font-size: 25px;
+    }
+    .t_area{
+        resize: none;
+        width: 400px;
+        height: 300px;
+    }
+    #p_submit{  
+        margin-left: 300px; 
+        width: 30%;
+        height: 30%;  
+    }
+
+    #section-8{
+        background-color: #a98467;
+        height: 135vh;
+        display: none;
+    }    
+    .story h1{
+        margin: 0px;
+    }   
+    .story p{
+        margin: 20px 0px 0px 0px;
+        font-size: 24px;
+    }   
+    .story h2{
+        font-size: 30px;
+        margin: 0px;
+    }
+    .story hr{
+        width: 200px;
+        border: 1px solid green;
+    } 
+    .kotak41{
+        padding: 0px 30px 30px 30px;
+        display: inline-block;
+        height: 70%;
+        width: 50%;
+        margin: 20px ;
+        background-color: #efebce;
+        border-radius: 20%;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.300);
+        animation: kiri linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;    
+    }
+    .kotak42{
+        padding: 0px 30px 30px 30px;
+        display: inline-block;
+        height: 70%;
+        width: 50%;
+        margin: 20px ;
+        background-color: #efebce;
+        border-radius: 20%;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.300);
+        animation: kanan linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;    
+    }
+    .kotak43{
+        padding: 0px 30px 30px 30px;
+        display: inline-block;
+        height: 70%;
+        width: 50%;
+        margin: 20px ;
+        background-color: #efebce;
+        border-radius: 20%;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.300);
+        animation: kiri linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;    
+    }
+    .kotak44{
+        padding: 0px 30px 30px 30px;
+        display: inline-block;
+        height: 70%;
+        width: 50%;
+        margin: 20px ;
+        background-color: #efebce;
+        border-radius: 20%;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.300);
+        animation: kanan linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;    
+    }
+    
+    .gift{
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+    }
+    .gift h1{
+        margin: 0px;
+    }
+    .p_text p{
+        text-align: center;
+        font-size: 24px;
+    }
+    .p_text{
+        margin: 0 30px 50px 30px;
+    }
+    .kotak5{
+        padding: 5px 30px 30px;
+        display: inline-block;
+        height: 70%;
+        width: 70%;
+        margin-left: 90px;
+        background-color: #efebce;
+        border-radius: 8%;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.300);
+    }
+    .kotak5 input{
+        width: 100%;
+        height: 40px;
+    }
+    .kotak5 select{
+        width: 100%;
+        height: 40px;
+    }
+    .kotak5 p{
+        font-size: 30px;
+    }
+    .kotak5 label, input{
+        font-size: 20px;
+    }
+    #p_kirim{
+        margin-left: 400px; 
+        width: 30%;
+        height: 30%;   
+    }
+
+    .message{
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+        text-align: center;
+    }
+    .kotak6{
+        padding: 30px;
+        display: inline-block;
+        height: 70%;
+        width: 60%;
+        margin: 20px 20px 0 0;
+        background-color: #efebce;
+        border-radius: 8%;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.300);
+    }
+    .kotak6 input{
+        width: 50%;
+        height: 30px;
+    }
+    .kotak6 label{
+        font-size: 24px;
+    }
+    #u_kirim{
+        width: 30%;
+        height: 30%;   
+    }
+    
+    .thanks p{
+        font-size: 24px;
+    }
+}
+
+/*Bentuk HP*/
+@media only screen and (max-width: 768px){
+    h1{
+        font-size: 35px;
+    }
+    #mar-tb{
+        margin: 10px;
+        font-size: 70px;
+    }    
+    .konten p{
+        font-size: 20px;
+    }
+    #nav{
+        height: 70px;
+    }
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger .line{
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 6px 0;
+    }
+    .nav-bar{
+        height: 0px;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100vw;
+        background: orange;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+    .nav-bar.active{
+        height: 450px;
+    }
+    .nav-bar ul{
+        display: block;
+        width: fit-content;
+        margin: 30px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .nav-bar.active ul{
+        opacity: 1; 
+    }
+    .nav-bar ul li a{
+        margin-bottom: 12px;
+        color: white;
+    }
+
+    .quotes{
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+        text-align: center;
+    }    
+    .isi_quotes{
+        color: white;
+        text-align: left;
+        padding: 0 30px 0 30px;
+    }    
+    .isi_quotes p{
+        font-size: 14px;
+    }
+    .audio{
+        width: 20%;
+        margin: 30px;
+        position: relative;
+        left: 0%;
+    }
+
+    .profile{
+        background-image: url('../img//bg3.jpeg');
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+        text-align: center;
+    }    
+    .profile p{
+        font-size: 14px;
+    }
+    .profile h1{
+        margin-bottom: 15px;
+    }
+    .profile h2{
+        font-family: 'Lora';
+        font-size: 18px;
+        margin: 0px;
+    }
+    .profile h3{
+        color: black;
+        font-size: 20px;
+        margin-bottom: 1rem;
+    }
+    .bentuk{
+        width: 95px;
+        height: 95px;
+        background-color: white;
+        display: flex;
+        border-radius: 100%;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        position: inline-block;
+        left: 50%;
+    }
+    .bingkai{
+        position: absolute;
+        width: 95px;
+        height: 95px;
+        display: flex;
+        border-radius: 100%;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        margin-right: 95px;
+    }    
+    #kotak1{
+        display: inline-block;
+        position: relative;
+        margin: 40px 20px 40px 0;
+    }
+    #kotak2{
+        display: inline-block;
+        position: relative;
+        margin: 40px 0 40px 20px;
+    }
+    .kotak{
+        display: inline-block;
+        position: relative;
+        margin: 0 30px 0;
+    }
+    .kotak h3{
+        margin: 0;
+    }
+    .tombol{
+        border: none;
+        background-color: white;
+        padding: 8px 10px;
+        cursor: pointer;
+        display: inline-block;
+        color: orange;
+        border-radius: 50px;
+        text-decoration: none;
+        margin: 10px 0 15px;
+    }
+    .tombol:hover{
+        background-color: orange;
+        color: white;
+    }
+
+    #section-4{
+        background-color: #e3d5ca;
+        height: 160vh;
+        display: none;
+    }    
+    .acara{
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+        text-align: center;
+    }
+    #akad{
+        padding-top: 10px;
+        display: block;
+        height: 400px;;
+        width: 350px;
+        margin: 20px;
+        background-color: ##efebce;
+        border-radius: 8%;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.300);
+    }
+    #akad h1{
+        font-size: 35px;
+    }
+    #akad p{
+        font-size: 14px;
+    }
+    #akad h2{
+        font-family: 'Lora';
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 0px;
+    }
+    #resepsi{
+        padding-top: 10px;
+        display: block;
+        height: 400px;;
+        width: 350px;
+        margin: 20px;
+        background-color: #efebce;
+        border-radius: 8%;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.300);
+    }
+    #resepsi h1{
+        font-size: 35px;
+    }
+    #resepsi p{
+        font-size: 14px;
+    }
+    hr{
+        width: 70px;
+        border: 1px solid red;
+    }
+    #resepsi h2{
+        font-family: 'Lora';
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 0px;
+    }
+
+    #section-5{
+        background-color: #d5bdaf;
+        height: 200vh;
+        display: none;
+    }       
+    .gallery{
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+        text-align: center;
+    }    
+    .photo img{
+        display: block;
+        width: 100%;
+    }
+    video{
+        display: block;
+        width: 100%;
+    }
+    .photo{
+        background-color: white;
+        width: 65%;
+        height: 50%;
+        margin: auto;
+        padding: 0px;
+        border: 10px solid white;
+        list-style: none;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        display: block;
+    }    
+    .photo li{
+        margin: 8px;
+    }
+
+    .tamu{
+        padding: 64px 0 50px 18px;
+        text-align: center;
+    }
+    .table{
+        margin-top: 2.8rem;
+        width: 350px;
+    }
+    .table th, td {
+        text-align: center;
+        padding: 5px;
+        font-size: 12px;
+    }        
+    
+    #section-7{
+        background-color: #e7d7c1;
+        height: 100vh;
+        display: none;
+    }    
+    .rsvp{
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+    }
+    .kotak3{
+        padding: 30px 3px 30px 30px;
+        display: inline-block;
+        height: 70%;
+        width: 70%;
+        margin-left: 45px;
+        background-color: #efebce;
+        border-radius: 8%;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.300);
+    }
+    .t_area{
+        resize: none;
+        width: 200px;
+        height: 100px;
+    }
+    #p_submit{
+        margin-left: 150px;    
+        width: 30%;
+        height: 30%;
+    }
+
+    #section-8{
+        background-color: #a98467;
+        height: 200vh;
+        display: none;
+    }    
+    .story{
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+        text-align: center;
+    }    
+    .story h1{
+        margin: 0px;
+    } 
+    .story p{
+        margin: 20px 0px 0px 0px;
+        font-size: 14px;
+    } 
+    .story hr{
+        width: 150px;
+        border: 1px solid green;
+    }
+    .kotak41{
+        padding: 0px 30px 30px 30px;
+        display: inline-block;
+        height: 50%;
+        width: 50%;
+        margin: 20px 0px 0 0;
+        background-color: #efebce;
+        border-radius: 8%;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.300);
+        animation: kiri linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;    
+    }
+
+    #section-9{
+        background-color: #eae0d5;
+        height: 105vh;
+        display: none;
+    }
+    .gambar1{
+        display: inline-block;
+        position: absolute;
+        top: 75px;
+        right: 250px;
+        margin: 0px;
+        width: 50px;
+        height: 50px;
+        animation: kiri linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+    }
+    .gambar2{
+        display: inline-block;
+        position: absolute;
+        top: 75px;
+        right: 90px;
+        margin: 0px;
+        width: 50px;
+        height: 50px;
+        animation: kanan linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+    }    
+    .gift{
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+    } 
+    .gift h1{
+        margin: 0px;
+    }
+    .p_text p{
+        text-align: center;
+        font-size: 14px;
+    }
+    .p_text{
+        margin-bottom: 30px;
+    }
+    .kotak5{
+        padding: 5px 30px 30px;
+        display: inline-block;
+        height: 60%;
+        width: 60%;
+        margin-left: 50px;
+        background-color: #efebce;
+        border-radius: 8%;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.300);
+    }
+    .kotak5 p{
+        font-size: 16;
+    }
+    .kotak5 input{
+        width: 100%;
+        height: 30px;
+    }
+    .kotak5 select{
+        width: 100%;
+        height: 30px;
+    }
+    #p_kirim{
+        margin-left: 150px; 
+        width: 30%;
+        height: 30%;   
+    }
+    
+    #section-10{
+        background-color: #bbbbbb;
+        height: 80vh;
+        display: none;
+    }    
+    .message{
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+        text-align: center;
+    }
+    .kotak6{
+        padding: 30px;
+        display: inline-block;
+        height: 70%;
+        width: 70%;
+        margin-left: 35px;
+        background-color: #efebce;
+        border-radius: 8%;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.300);
+    }
+    .kotak6 input{
+        width: 50%;
+        height: 30px;
+    }
+    #u_kirim{
+        width: 30%;
+        height: 30%;   
+    }
+    
+    #section-11{
+        background-color: #a98467;
+        height: 70vh;
+        display: none;
+    }    
+    .thanks{
+        padding-top: 4rem;
+        text-align: center;
+    }
+    .thanks p{
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
